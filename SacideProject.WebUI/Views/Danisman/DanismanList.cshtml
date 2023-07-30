@@ -1,0 +1,27 @@
+﻿@model List<SacideProject.Entity.Danisman>
+
+<a asp-action="DanismanEkle" asp-controller="Danisman" class="btn btn-sm btn-primary mb-3">Danisman Ekle</a>
+
+<table class="table table-dark">
+    <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Terapi Ad</th>
+        <th>Düzenleme</th>
+        <th>Silme</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+           <tr>
+               <td>@item.DanismanID</td>
+               <td>@item.DanismanAd</td>
+               <td>@item.DanismanSoyad</td>
+               <td>@item.Terapi.TerapiAd</td>
+               <td><a asp-action="DanismanDuzenle"  asp-route-id="@item.DanismanID" asp-controller="Danisman" class="btn btn-sm btn-warning">Danisman Düzenle</a></td>
+               <td><a asp-action="DanismanSil" asp-route-id="@item.DanismanID" asp-controller="Danisman" class="btn btn-sm btn-danger">Danisman Sil</a></td>
+           </tr>
+    }
+</table>
+
+<a href="/Danisman/DanismanAta" class="btn btn-success">Danisman Ata</a>

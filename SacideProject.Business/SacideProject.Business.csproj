@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SacideProject.Data\SacideProject.Data.csproj" />
+    <ProjectReference Include="..\SacideProject.Entity\SacideProject.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

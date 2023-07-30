@@ -1,0 +1,24 @@
+﻿@model SacideProject.Entity.Danisman
+
+<form asp-controller="Danisman" asp-action="DanismanDuzenle" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-2">
+                <label>Ad</label>
+                <input type="text" class="form-control" asp-for="DanismanAd" />
+            </div>
+
+            <div class="form-group mb-2">
+                <label>Soyad</label>
+                <input type="text" class="form-control" asp-for="DanismanSoyad" />
+            </div>
+
+            <div class="form-group mb-2">
+                <label>Terapiler</label>
+                @Html.DropDownListFor(x => x.TerapiID, (List<SelectListItem>)ViewBag.cv, new {@class = "form-control"})
+            </div>
+            <input type="hidden" name="DanismanID" value="@Model.DanismanID" />
+            <button type="submit" class="btn btn-primary">Düzenle</button>
+        </div>
+    </div>
+</form>

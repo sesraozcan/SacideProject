@@ -1,0 +1,18 @@
+﻿@model SacideProject.Entity.Danisman
+
+<form asp-controller="Danisman" asp-action="DanismanEKle" method="post">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group mb-2">
+                <label>Ad</label>
+                <input type="text" class="form-control" name="DanismanAd" />
+            </div>
+
+            <div class="form-group mb-2">
+                <label>Soyad</label>
+                <input type="text" class="form-control" name="DanismanSoyad" />
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </div>
+</form>

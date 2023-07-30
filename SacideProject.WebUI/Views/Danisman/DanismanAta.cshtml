@@ -1,0 +1,27 @@
+﻿@model List<SacideProject.Entity.Danisman>
+
+<table class="table table-dark table-bordered">
+    <tr>
+        <th>Ad</th>
+        <th>Terapi ID</th>
+        <th>Terapi Değiştir</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.DanismanAd  @item.DanismanSoyad</th>
+            <th>
+                @{
+                    var rnd = new Random().Next(1, 6);
+                    item.TerapiID = rnd;
+                }
+                @item.TerapiID
+            </th>
+            <td><a asp-action="DanismanDuzenle" asp-route-id="@item.DanismanID" asp-controller="Danisman" class="btn btn-sm btn-danger">Terapi Değiştir</a></td>
+
+        </tr>
+    }
+</table>
+
+<a href="/Danisman/DanismanList" class="btn btn-success">Danisman Listesine Geri Dön</a>
+
